@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="NyumonPopupPlugin.contribution1"
+            nameFilter="*.txt"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               label="さぶなメニュー"
+               path="custompp"
+               id="ppmenu">
+            <separator
+                  name="ppgroup">
+            </separator>
+         </menu>
+         <action
+               class="nyumonpopupplugin.popup.actions.HogehogeAction"
+               enablesFor="1"
+               icon="icons/starfish.gif"
+               id="NyumonPopupPlugin.newAction"
+               label="あくしょんなラベル"
+               menubarPath="ppmenu/ppgroup">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
